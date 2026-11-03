@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Stavební deník BD Zavadilova 22</title>
+<style>
+:root{--bg:#f6f5f2;--card:#fff;--ink:#1d1d1b;--mut:#6b6a66;--line:#dcdad4;--acc:#8a5a2b;--ok:#2e7d32;--bad:#c62828;
+--t-prac:#8a5a2b;--t-nep:#b9b5ab;--t-sv:#5c7f9c;--t-neu:#e3e0d8;--obk:#8a5a2b;--izo:#5c7f9c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1a18;--card:#242422;--ink:#ecebe7;--mut:#a3a19b;--line:#3a3935;--acc:#d39b62;--t-nep:#55534d;--t-neu:#33322e}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+header{padding:16px;border-bottom:1px solid var(--line);background:var(--card)}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:0 0 10px}h3{font-size:14px;margin:14px 0 6px}
+.mut{color:var(--mut)}.tag{display:inline-block;padding:1px 7px;border:1px solid var(--line);border-radius:10px;font-size:12px;margin:0 4px 2px 0}
+.int{background:#fff3cd;color:#5c4400;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:600}
+main{display:grid;grid-template-columns:300px 1fr;gap:16px;padding:16px;max-width:1500px;margin:0 auto}
+@media (max-width:900px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px;margin-bottom:16px}
+label{display:block;margin:4px 0}input[type=search],input[type=date],select{width:100%;padding:6px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--ink)}
+.row{display:flex;gap:6px}.row>*{flex:1}
+button{padding:6px 10px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--ink);cursor:pointer}
+button.pri{background:var(--acc);color:#fff;border-color:var(--acc)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px}
+.kpi{border:1px solid var(--line);border-radius:6px;padding:8px}.kpi b{display:block;font-size:20px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:10px}
+.cal .h{font-size:11px;color:var(--mut);text-align:center}
+.cal .d{aspect-ratio:1.4;border-radius:4px;font-size:12px;padding:2px 4px;border:1px solid transparent;cursor:default;background:transparent}
+.cal .d.in{background:var(--t-neu)}.cal .d.rec{cursor:pointer;color:#fff}
+.cal .d.prac{background:var(--t-prac)}.cal .d.nep{background:var(--t-nep);color:var(--ink)}.cal .d.sv{background:var(--t-sv)}
+.cal .d.off{opacity:.25}.cal .d.sel{outline:2px solid var(--ink)}
+.legend span{margin-right:10px;font-size:12px}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.list .it{border-top:1px solid var(--line);padding:8px 2px;cursor:pointer}.list .it:hover{background:var(--bg)}
+.list .it.sel{background:var(--bg);box-shadow:inset 3px 0 var(--acc)}
+dl{display:grid;grid-template-columns:220px 1fr;gap:4px 12px;margin:0}dt{color:var(--mut)}dd{margin:0}
+@media (max-width:600px){dl{grid-template-columns:1fr}}
+mark{background:#ffe08a;color:#000}
+.ok{color:var(--ok);font-weight:600}.bad{color:var(--bad);font-weight:600}
+code{font-size:12px;word-break:break-all}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px}
+svg text{fill:var(--mut);font-size:10px}.charts svg{max-height:210px;display:block}
+.cal .d.red{box-shadow:inset 0 -5px 0 var(--bad)}.cal .d.arch{background-image:repeating-linear-gradient(135deg,transparent 0 4px,rgba(0,0,0,.12) 4px 6px)}
+.pod{border-left:4px solid var(--bad);background:color-mix(in srgb,var(--bad) 7%,var(--card));border-radius:4px;padding:8px 10px;margin:6px 0}
+.pod b.t{color:var(--bad)}.pod.done{border-left-color:var(--mut);background:transparent}.pod.done b.t{color:var(--mut)}
+.pod ul{margin:4px 0 0 18px;padding:0}.pod li{margin:2px 0}.red{color:var(--bad);font-weight:600}
+.arch-note{font-size:12px;margin:6px 0}
+details.card>summary{cursor:pointer;list-style:none}details.card>summary h2{display:inline;margin:0}details.card>summary::before{content:"▸ ";color:var(--mut)}details.card[open]>summary::before{content:"▾ "}details.card[open]>summary{margin-bottom:10px}
+details.starsi>summary{cursor:pointer;color:var(--mut);font-size:13px;margin:6px 0}
+details.prazdne{margin-top:10px;font-size:12px}details.prazdne summary{cursor:pointer;color:var(--mut)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px;margin:6px 0}.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block}
+.gal figure{margin:0;cursor:pointer}.gal figcaption{font-size:11px;color:var(--mut)}
+#print{display:none}
+@media print{body>*:not(#print){display:none!important}#print{display:block}.pday{page-break-inside:avoid;border-top:1px solid #999;padding:6px 0}dl{grid-template-columns:200px 1fr}mark{background:none}}
+.pril{margin:6px 0;padding:6px;border:1px solid var(--line);border-radius:6px}.pril img{max-width:220px;max-height:160px;margin:4px 6px 0 0;border:1px solid var(--line)}
+:root{--t-zaz:#4f8a7b}
+.cal .d.zaz{background:var(--t-zaz)}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="stavba">Stavební deník</h1>
+  <div class="mut" id="ident"></div>
+  <div style="margin-top:6px"><span class="int">Sestaveno dodatečně z doložených podkladů – dny bez dokladu nejsou vyplněny</span> <span class="mut" id="gen"></span></div>
+</header>
+<main>
+<aside>
+  <div class="card">
+    <h2>Kalendář <span class="mut">(od nejnovějšího)</span></h2>
+    <div class="legend"><span><i style="background:var(--t-prac)"></i>pracovní</span><span><i style="background:var(--t-nep)"></i>nepracovalo</span><span><i style="background:var(--t-sv)"></i>svátek</span><span><i style="background:var(--t-zaz)"></i>záznam z podkladů</span><span><i style="background:var(--t-neu)"></i>nedoloženo (bez záznamu)</span></div>
+    <div id="cal"></div>
+  </div>
+  <details class="card">
+    <summary><h2>Hledání a filtry</h2></summary>
+    <input type="search" id="q" placeholder="Fulltext (bez diakritiky stačí)…">
+    <h3>Období</h3>
+    <div class="row"><label>od <input type="date" id="od"></label><label>do <input type="date" id="do"></label></div>
+    <select id="preset" aria-label="Předvolba období">
+      <option value="30">posledních 30 dní</option><option value="tyden">tento týden</option><option value="mtyden">minulý týden</option>
+      <option value="mesic">tento měsíc</option><option value="mmesic">minulý měsíc</option><option value="vse">celé období</option><option value="vlastni">vlastní</option>
+    </select>
+    <div class="arch-note mut" id="archNote"></div>
+    <div class="row"><button id="b30">Posledních 30 dní</button><button id="barch">Včetně archivu</button></div>
+    <input type="checkbox" id="f-tep" hidden>
+    <h3>Typ záznamu</h3>
+    <select id="typ"><option value="">vše</option></select>
+    <label><input type="checkbox" id="f-prek"> jen s překážkou / pokynem</label>
+    <label><input type="checkbox" id="f-jedn"> jen s kontrolou / jednáním</label>
+    <label><input type="checkbox" id="f-foto"> jen s fotkou</label>
+    
+    <h3>Objekt <span class="mut">(dle textu)</span></h3><div id="objekty"></div>
+    <h3>Profese <span class="mut">(dle textu)</span></h3><div id="profese"></div>
+    <div class="row" style="margin-top:10px"><button id="reset">Zrušit filtry</button><button class="pri" id="tisk">Tisk / PDF výběru</button></div>
+    <p class="mut" id="pocet"></p>
+  </details>
+  <details class="card">
+    <summary><h2>Integrita</h2></summary>
+    <div id="integ">Počítám sha256…</div>
+    <h3>Ověřit soubor proti manifestu</h3>
+    <input type="file" id="soubory" multiple>
+    <div id="souboryOut"></div>
+  </details>
+</aside>
+<section>
+  <div class="card" id="detailCard"><h2 id="detH">Detail dne</h2><div id="detail" class="mut">Vyber den v kalendáři.</div></div>
+  
+  <div class="card" id="galCard" hidden><h2>Fotodokumentace <span id="galN" class="mut"></span></h2><div class="gal" id="gal"></div><button id="galAll">Zobrazit všechny</button></div>
+  <details class="card"><summary><h2>Statistiky výběru <span class="mut">(měřeno z textu záznamů)</span></h2></summary><div class="row obd"><label>od <input type="date" data-sync="od"></label><label>do <input type="date" data-sync="do"></label></div><div class="kpis" id="kpis"></div></details>
+  <details class="card"><summary><h2>Grafy</h2></summary><div class="row obd"><label>od <input type="date" data-sync="od"></label><label>do <input type="date" data-sync="do"></label></div><div class="charts" id="charts"></div></details>
+  <details class="card"><summary><h2>Časová osa <span class="mut" id="osaRozsah">(od nejnovějšího)</span></h2></summary><div class="list" id="list"></div></details>
+</section>
+</main>
+<div id="print"></div>
+<script src="data.js"></script>
+
+<script>
+"use strict";
+const D = window.DENIK;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const fmtD = iso => { const [y,m,d] = iso.split("-"); return `${+d}. ${+m}. ${y}`; };
+const num = x => x == null ? "–" : String(Math.round(x*100)/100).replace(".", ",");
+const R = D.public_raw.trim().split("\n").map(l => JSON.parse(l));
+// konec období = vždy dnešní den (Praha), i když za dnešek ještě není zápis; D.data_do = poslední den dat
+const DNES = new Date().toLocaleDateString("sv-SE", {timeZone: "Europe/Prague"});
+D.data_do = D.obdobi[1]; if (DNES > D.obdobi[1]) D.obdobi[1] = DNES;
+let sel = null;
+
+// výchozí okno = posledních 30 dní; starší záznamy jsou zálohované (archiv), data se nemění
+const addD = (iso, n) => { const t = new Date(iso + "T12:00"); t.setDate(t.getDate() + n); return t.toISOString().slice(0, 10); };
+const OD30 = [addD(D.obdobi[1], -29), D.obdobi[0]].sort()[1];
+// předvolby období vztažené ke konci dat (D.obdobi[1]); výsledek se ořízne na rozsah dat
+const clamp = iso => iso < D.obdobi[0] ? D.obdobi[0] : iso > D.obdobi[1] ? D.obdobi[1] : iso;
+function presetRange(p) {
+  const e = D.obdobi[1], t = new Date(e + "T12:00"), dow = (t.getDay() + 6) % 7, po = addD(e, -dow), m1 = e.slice(0, 8) + "01";
+  const pm = addD(m1, -1);
+  const r = {"30": [OD30, e], tyden: [po, addD(po, 6)], mtyden: [addD(po, -7), addD(po, -1)], mesic: [m1, e],
+    mmesic: [pm.slice(0, 8) + "01", pm], vse: [D.obdobi[0], e]}[p];
+  return r && r.map(clamp);
+}
+function presetOf(od, d) { return ["30", "tyden", "mtyden", "mesic", "mmesic", "vse"].find(p => { const r = presetRange(p); return r[0] === od && r[1] === d; }) || "vlastni"; }
+// stav období a teplotního filtru v URL hash: #od=2026-07-01&do=2026-07-31&t=1
+function toHash() {
+  const h = `od=${$("od").value}&do=${$("do").value}` + ($("f-tep").checked ? "&t=1" : "");
+  if (location.hash.slice(1) !== h) history.replaceState(null, "", "#" + h);
+}
+function fromHash() {
+  const p = new URLSearchParams(location.hash.slice(1)), ok = s => /^\d{4}-\d{2}-\d{2}$/.test(s || "");
+  if (ok(p.get("od"))) $("od").value = clamp(p.get("od"));
+  if (ok(p.get("do"))) $("do").value = clamp(p.get("do"));
+  if ($("od").value > $("do").value) $("do").value = $("od").value;
+  $("f-tep").checked = p.get("t") === "1";
+}
+
+// ---------- hlavička ----------
+const I = D.identifikace;
+$("stavba").textContent = "Stavební deník – " + I.stavba;
+$("ident").textContent = `${I.misto} · ${I.predmet} · zhotovitel ${I.zhotovitel} · období ${I.obdobi_pilotu}`;
+$("gen").textContent = "data vygenerována " + D.vygenerovano.replace("T", " ");
+
+// ---------- filtry ----------
+$("od").min = $("do").min = D.obdobi[0]; $("od").value = OD30;
+$("do").value = $("od").max = $("do").max = D.obdobi[1];
+[...new Set(R.map(r => r.odvozeno.typ))].forEach(t => $("typ").insertAdjacentHTML("beforeend", `<option>${esc(t)}</option>`));
+const chk = (box, vals) => vals.forEach(v => $(box).insertAdjacentHTML("beforeend", `<label><input type="checkbox" data-g="${box}" value="${esc(v)}"> ${esc(v)}</label>`));
+chk("objekty", [...[...new Set(R.flatMap(r => r.odvozeno.objekty))].sort().map(o => "podlaží " + o)]);
+chk("profese", [...new Set(R.flatMap(r => r.odvozeno.profese))]);
+const checked = g => [...document.querySelectorAll(`input[data-g=${g}]:checked`)].map(i => i.value);
+const hay = R.map(r => norm([r.datum, fmtD(r.datum), ...Object.values(r.b1), ...Object.values(r.b2), ...Object.values(r.c_zapis)].join(" ")));
+
+function filtered(od = $("od").value) {
+  const q = norm($("q").value.trim()).split(/\s+/).filter(Boolean);
+  const ob = checked("objekty"), pr = checked("profese");
+  return R.filter((r, i) => {
+    const o = r.odvozeno;
+    if (r.datum < od || r.datum > $("do").value) return false;
+    if ($("typ").value && o.typ !== $("typ").value) return false;
+    if ($("f-prek").checked && !o.prekazka) return false;
+    if ($("f-jedn").checked && !o.jednani) return false;
+    if ($("f-foto").checked && !o.fotky) return false;
+    if ($("f-tep").checked && !(o.stats && o.stats.teplota_mimo_limit)) return false;
+    
+    if (ob.length && !ob.some(v => o.objekty.includes(v.slice(-1)))) return false;
+    if (pr.length && !pr.some(v => o.profese.includes(v))) return false;
+    return q.every(w => hay[i].includes(w));
+  });
+}
+
+// zvýraznění fulltextu bez ohledu na diakritiku; **tučné** z md zachovat
+function hl(text) {
+  const q = norm($("q").value.trim()).split(/\s+/).filter(Boolean);
+  let html = esc(text).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  if (!q.length) return html;
+  // diakritiku odstraňujeme po znacích, aby pozice v normalizovaném textu šly mapovat zpět
+  const src = [...html], low = src.map(c => norm(c));
+  const flat = low.join("");
+  const marks = new Array(src.length).fill(false);
+  q.forEach(w => { let p = flat.indexOf(w);
+    while (p >= 0) { let acc = 0; for (let k = 0; k < src.length; k++) { const s = acc; acc += low[k].length; if (acc > p && s < p + w.length) marks[k] = true; } p = flat.indexOf(w, p + 1); } });
+  let out = "", inTag = false, open = false;
+  src.forEach((c, k) => { if (c === "<") inTag = true;
+    const m = marks[k] && !inTag;
+    if (m && !open) { out += "<mark>"; open = true; } if (!m && open) { out += "</mark>"; open = false; }
+    out += c; if (c === ">") inTag = false; });
+  return out + (open ? "</mark>" : "");
+}
+
+// ---------- kalendář ----------
+function cal(vis) {
+  const ids = new Set(vis.map(r => r.datum)), by = Object.fromEntries(R.map(r => [r.datum, r]));
+  const od = new Date(D.obdobi[0] + "T12:00"), dd = new Date(D.obdobi[1] + "T12:00");
+  let html = "";
+  const mesice = [];  // od nejnovějšího měsíce
+  for (let m = new Date(od.getFullYear(), od.getMonth(), 1, 12); m <= dd; m = new Date(m.getFullYear(), m.getMonth() + 1, 1, 12)) mesice.unshift(m);
+  mesice.forEach((m, i) => {
+    if (i === 2) html += `<details class="starsi"><summary>Starší měsíce (${mesice.length - 2})</summary>`;
+    // dny obráceně (od posledního dne měsíce), týden ne→po, aby měsíce pohledově navazovaly
+    const posl = new Date(m.getFullYear(), m.getMonth() + 1, 0, 12);
+    html += `<h3>${m.toLocaleDateString("cs-CZ", {month: "long", year: "numeric"})}</h3><div class="cal">` + ["ne","so","pá","čt","st","út","po"].map(h => `<div class="h">${h}</div>`).join("");
+    html += "<div></div>".repeat((7 - posl.getDay()) % 7);
+    for (let d = posl; d.getMonth() === m.getMonth(); d = new Date(d.getFullYear(), d.getMonth(), d.getDate() - 1, 12)) {
+      const iso = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+      const r = by[iso], inP = iso >= D.obdobi[0] && iso <= D.obdobi[1];
+      let cls = "d" + (inP ? " in" : "") + (inP && iso < OD30 ? " arch" : "");
+      
+      if (r) cls += " rec " + ({"pracovní den":"prac","státní svátek":"sv","záznam z podkladů":"zaz"}[r.odvozeno.typ] || "nep") + (ids.has(iso) ? "" : " off") + (sel === iso ? " sel" : "");
+      const tl = r && r.odvozeno.stats && r.odvozeno.stats.teplota_mimo_limit;
+      let tip = (r ? r.odvozeno.typ : inP ? (iso > D.data_do ? "zápis za tento den se doplňuje" : "nedoloženo (bez záznamu deníku)") : "") + (inP && iso < OD30 ? " · archiv" : "");
+      
+      html += `<div class="${cls}" ${r ? `data-d="${iso}" ` : ""}title="${esc(tip)}">${d.getDate()}</div>`;
+    }
+    html += "</div>";
+  });
+  if (mesice.length > 2) html += "</details>";
+  const otevreno = document.querySelector("#cal details.starsi")?.open;
+  $("cal").innerHTML = html;
+  if (otevreno || $("cal").querySelector("details.starsi .sel")) $("cal").querySelector("details.starsi").open = true;
+}
+
+// ---------- seznam a detail ----------
+const short = (s, n) => s.length > n ? s.slice(0, n) + "…" : s;
+function snippet(r) {  // při hledání ukaž úryvek pole se shodou, jinak začátek prací
+  const w = norm($("q").value.trim()).split(/\s+/).filter(Boolean)[0];
+  if (w) for (const k of ["b1", "b2", "c_zapis"]) for (const p of D.pole[k]) {
+    const t = r[k][p], i = [...t].map(norm).join("").indexOf(w);
+    if (i >= 0) return `${D.popisky[p]}: ` + (i > 80 ? "…" : "") + short(t.slice(Math.max(0, i - 80)), 220);
+  }
+  return short(r.b1.prace_popis_mnozstvi, 220);
+}
+function list(vis) {
+  // časová osa od nejnovějšího (grafy zůstávají chronologicky)
+  $("list").innerHTML = [...vis].reverse().map(r => `<div class="it${sel === r.datum ? " sel" : ""}" data-d="${r.datum}">
+    <b>${fmtD(r.datum)}</b> <span class="mut">${r.den_tydne}</span> <span class="tag">${esc(r.odvozeno.typ)}</span>
+    ${r.odvozeno.objekty.map(o => `<span class="tag">${o}. NP</span>`).join("")}${r.odvozeno.prekazka ? '<span class="tag">pokyn / překážka</span>' : ""}${r.odvozeno.fotky ? `<span class="tag">foto ${r.odvozeno.fotky}</span>` : ""}
+    <div class="mut">${hl(snippet(r))}</div></div>`).join("") || '<p class="mut">Filtru neodpovídá žádný záznam.</p>';
+  // dnešní den bez zápisu: na začátek osy, aby bylo vidět, že deník je aktuální k dnešku
+  if ($("do").value >= DNES && !R.some(r => r.datum === DNES))
+    $("list").insertAdjacentHTML("afterbegin", `<div class="it"><b>${fmtD(DNES)}</b> <span class="tag">dnes</span><div class="mut">Zápis za dnešní den se doplňuje (deník se aktualizuje denně).</div></div>`);
+}
+
+function dl(r) { return dlDen(r); }
+function dlDen(r) {
+  const sek = [["B.1 Údaje o průběhu prací", "b1"], ["B.2 Pokyny, kontroly, dokumentace", "b2"], ["C Zápis", "c_zapis"]];
+  // vyplněná pole naplno, nevyplněná (neuvedeno / nedoloženo) jen jako sbalený výčet – měřeno 16. 10. 2026:
+  // 4 pole jsou prázdná ve všech dnech, většina ostatních ve 70–95 % dnů
+  const prazdne = [];
+  const html = sek.map(([t, k]) => {
+    const pp = D.pole[k].filter(p => p === "foto" ? (r.foto?.length || r.odvozeno.fotky.length || r.odvozeno.fotky > 0) : !jePrazdne(r[k][p]));
+    D.pole[k].filter(p => !pp.includes(p)).forEach(p => prazdne.push(D.popisky[p]));
+    return pp.length ? `<h3>${t}</h3><dl>` + pp.map(p => `<dt>${esc(D.popisky[p])}</dt><dd>${p === "foto" ? fotky(r) : hl(r[k][p])}</dd>`).join("") + "</dl>" : "";
+  }).join("") + (prazdne.length ? `<details class="prazdne"><summary>Bez údaje v tento den (${prazdne.length})</summary>${esc(prazdne.join(" · "))}</details>` : "");
+  return html
+;
+}
+const jePrazdne = v => /^\s*(neuvedeno|nedoloženo|—|-)?\s*$/i.test(v) || /^nedoloženo\b|nedoloženo\.?$/i.test(v.trim()) && v.length < 80;
+const fig = (f, d) => `<figure data-d="${d}"><a href="foto/${encodeURI(f)}" target="_blank" rel="noopener"><img loading="lazy" src="foto/n/${encodeURI(f)}" alt="fotodokumentace ${fmtD(d)}"></a><figcaption>${fmtD(d)}</figcaption></figure>`;
+function galerie(vse) {
+  const F = R.filter(r => r.foto?.length).flatMap(r => r.foto.map(f => [f, r.datum])).reverse();
+  $("galCard").hidden = !F.length;
+  $("galN").textContent = `(${F.length} snímků, od nejnovějších)`;
+  $("gal").innerHTML = (vse ? F : F.slice(0, 24)).map(([f, d]) => fig(f, d)).join("");
+  $("galAll").hidden = vse || F.length <= 24;
+}
+function fotky(r) {
+  if (r.foto?.length) return `<div class="gal">${r.foto.map(f => fig(f, r.datum)).join("")}</div>`;
+  return hl(r.b2.foto);
+}
+function detail() {
+  const r = R.find(x => x.datum === sel);
+  if (!r) return;
+  $("detH").textContent = `Detail dne ${fmtD(r.datum)} (${r.den_tydne}) – ${r.id}`;
+  $("detail").className = "";
+  $("detail").innerHTML = dl(r);
+}
+
+// ---------- statistiky a grafy (SVG, bez knihoven) ----------
+function kpis(vis) {
+  const s = vis.map(r => r.odvozeno.stats).filter(Boolean), sum = k => s.reduce((a, d) => a + (d[k] || 0), 0);
+  const os = s.filter(d => d.osoby != null);
+  const k = [["záznamů", vis.length], ["pracovních dní", s.filter(d => d.pracovalo).length || "nedoloženo"], 
+    ["osobodny", os.length ? sum("osoby") + ` <small class="mut">(${os.length} dní)</small>` : "nedoloženo"], ["průměr osob/den", os.length ? num(sum("osoby") / os.length) : "nedoloženo"],
+    ["dny se srážkami >1 mm", s.filter(d => (d.srazky_mm || 0) > 1).length], ["překážky / pokyny", sum("prekazky")], ["dny s jednáním", sum("jednani")], ["fotky", sum("foto") || "nedoloženo"]];
+  // kalendářní dny období bez záznamu deníku = nedoloženo (nic se nedopočítává)
+  const od = $("od").value, dd = $("do").value, nDni = Math.round((new Date(dd + "T12:00") - new Date(od + "T12:00")) / 864e5) + 1;
+  const nZaz = new Set(R.filter(r => r.datum >= od && r.datum <= dd).map(r => r.datum)).size;
+  k.splice(1, 0, ["kalendářních dní v období", nDni], ["dní nedoloženo <small class=\"mut\">(bez záznamu)</small>", Math.max(0, nDni - nZaz)]);
+  $("kpis").innerHTML = k.map(([l, v]) => `<div class="kpi"><b>${v}</b>${l}</div>`).join("");
+}
+function bars(title, vis, series, opt = {}) {
+  const W = 360, H = 170, L = 30, B = 28, T = 8, n = vis.length || 1, bw = (W - L - 4) / n;
+  const vals = vis.map(r => series.map(s => r.odvozeno.stats ? (r.odvozeno.stats[s.k] ?? null) : null));
+  const max = Math.max(1, ...vals.map(v => opt.line ? Math.max(...v.map(x => x ?? -99)) : v.reduce((a, x) => a + (x || 0), 0)));
+  const min = opt.line ? Math.min(0, ...vals.flat().filter(x => x != null)) : 0;
+  const y = v => T + (H - T - B) * (1 - (v - min) / (max - min));
+  let g = `<line x1="${L}" x2="${W}" y1="${y(min)}" y2="${y(min)}" stroke="var(--line)"/><text x="2" y="${y(max) + 4}">${num(max)}</text><text x="2" y="${y(min)}">${num(min)}</text>`;
+  vis.forEach((r, i) => {
+    const x = L + i * bw;
+    if (opt.line) series.forEach((s, j) => { const v = vals[i][j]; if (v != null) g += `<rect x="${x + bw * (0.15 + j * 0.35)}" y="${Math.min(y(v), y(0))}" width="${bw * 0.33}" height="${Math.abs(y(0) - y(v)) || 1}" fill="${s.c}"><title>${fmtD(r.datum)} ${s.l}: ${num(v)}</title></rect>`; });
+    else { let acc = 0; series.forEach((s, j) => { const v = vals[i][j] || 0; if (v) g += `<rect x="${x + bw * 0.15}" y="${y(acc + v)}" width="${bw * 0.7}" height="${y(acc) - y(acc + v)}" fill="${s.c}"><title>${fmtD(r.datum)} ${s.l}: ${num(v)}</title></rect>`; acc += v; }); }
+    if (n <= 20 || i % 2 === 0) g += `<text x="${x + bw / 2}" y="${H - B + 12}" text-anchor="middle">${+r.datum.slice(8)}.${+r.datum.slice(5, 7)}</text>`;
+  });
+  const leg = series.map(s => `<span><i style="background:${s.c}"></i>${s.l}</span>`).join("");
+  return `<div><h3>${title}</h3><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${esc(title)}">${g}</svg><div class="legend">${leg}</div></div>`;
+}
+function charts(vis) {
+  $("charts").innerHTML = vis.length ? [
+    
+    ...(vis.some(r => r.odvozeno.stats && r.odvozeno.stats.osoby != null) ? [bars("Počet osob", vis, [{k: "osoby", l: "osoby", c: "var(--acc)"}])] : []),
+    bars("Teplota (°C)", vis, [{k: "t_min", l: "min", c: "var(--izo)"}, {k: "t_max", l: "max", c: "#d9822b"}], {line: true}),
+    bars("Srážky (mm)", vis, [{k: "srazky_mm", l: "srážky", c: "var(--izo)"}]),
+    bars("Překážky / pokyny a jednání", vis, [{k: "prekazky", l: "překážky", c: "var(--bad)"}, {k: "jednani", l: "jednání", c: "#999"}]),
+  ].join("") : '<p class="mut">Bez dat ve výběru.</p>';
+}
+
+function render() {
+  if ($("od").value > $("do").value) $("do").value = $("od").value;
+  $("preset").value = presetOf($("od").value, $("do").value); toHash();
+  const vis = filtered();
+  if (sel && !vis.some(r => r.datum === sel)) sel = null;
+  $("pocet").textContent = `Zobrazeno ${vis.length} z ${R.length} záznamů.`;
+  const nArch = R.filter(r => r.datum < OD30).length;
+  $("archNote").textContent = $("od").value >= OD30 ? `Výchozí pohled: posledních 30 dní. Starší záznamy (${nArch}, do ${fmtD(addD(OD30, -1))}) jsou v archivu – zálohováno, data beze změny.` : `Zobrazen i archiv (záznamy starší než 30 dní, zálohované).`;
+  // období i přímo u statistik a grafů, zrcadlí #od/#do z filtrů
+  document.querySelectorAll("[data-sync]").forEach(i => { const m = $(i.dataset.sync); i.min = m.min; i.max = m.max; i.value = m.value; });
+  // časová osa vždy alespoň 30 dní zpět od „do“ (kratší období zúží jen kalendář, statistiky a grafy)
+  const od30 = clamp([$("od").value, addD($("do").value, -29)].sort()[0]);
+  $("osaRozsah").textContent = `(od nejnovějšího, ${fmtD(od30)} – ${fmtD($("do").value)})`;
+  cal(vis); list(od30 < $("od").value ? filtered(od30) : vis); kpis(vis); charts(vis);
+  if (sel) detail(); else { $("detH").textContent = "Detail dne"; $("detail").className = "mut"; $("detail").textContent = "Vyber den v kalendáři nebo v seznamu."; }
+}
+document.addEventListener("input", e => { if (e.target.closest("aside") && e.target.type !== "file") render(); });
+document.addEventListener("change", e => { const s = e.target.dataset && e.target.dataset.sync; if (s && /^\d{4}-\d{2}-\d{2}$/.test(e.target.value)) { $(s).value = clamp(e.target.value); render(); } });
+document.addEventListener("click", e => { const d = e.target.closest("[data-d]"); if (d && !e.target.closest("a")) { sel = d.dataset.d;
+  if (sel < $("od").value) $("od").value = D.obdobi[0];  // den z archivu: rozšířit období, ať jde zobrazit
+  render(); $("detailCard").scrollIntoView({behavior: "smooth", block: "start"}); } });
+$("galAll").onclick = () => galerie(true);
+// předvolba se nastaví dřív, než obecný posluchač na <aside> zavolá render()
+$("preset").addEventListener("input", () => { const r = presetRange($("preset").value); if (r) [$("od").value, $("do").value] = r; });
+window.addEventListener("hashchange", () => { fromHash(); render(); });
+$("b30").onclick = () => { $("od").value = OD30; $("do").value = D.obdobi[1]; render(); };
+$("barch").onclick = () => { $("od").value = D.obdobi[0]; render(); };
+$("reset").onclick = () => { $("q").value = ""; $("od").value = OD30; $("do").value = D.obdobi[1]; $("typ").value = "";
+  document.querySelectorAll("aside input[type=checkbox]").forEach(i => i.checked = false); render(); };
+
+// ---------- tisk vybraného rozsahu ----------
+$("tisk").onclick = () => {
+  const vis = filtered();
+  $("print").innerHTML = `<h1>Stavební deník – ${esc(I.stavba)}</h1><p>${esc(I.misto)} · ${esc(I.predmet)}<br>Objednatel: ${esc(I.objednatel)}<br>Zhotovitel: ${esc(I.zhotovitel)}<br>
+    Výběr: ${fmtD($("od").value)} – ${fmtD($("do").value)}, ${vis.length} záznamů${$("q").value ? `, hledáno „${esc($("q").value)}“` : ""}.</p>`
+    + vis.map(r => `<div class="pday"><h2>${fmtD(r.datum)} (${r.den_tydne})</h2>${dl(r)}</div>`).join("");
+  window.print();
+};
+
+// ---------- integrita: sha256 jsonl vs. manifest (+ TSA) ----------
+async function sha256(buf) {
+  if (window.crypto && crypto.subtle) return [...new Uint8Array(await crypto.subtle.digest("SHA-256", buf))].map(b => b.toString(16).padStart(2, "0")).join("");
+  return sha256js(new Uint8Array(buf));
+}
+function sha256js(m) { // fallback pro prohlížeče bez crypto.subtle (FIPS 180-4)
+  const K = [], H = [], isP = n => { for (let i = 2; i * i <= n; i++) if (n % i === 0) return false; return true; };
+  for (let n = 2, c = 0; c < 64; n++) if (isP(n)) { if (c < 8) H[c] = (Math.pow(n, 1/2) % 1) * 2**32 | 0; K[c++] = (Math.pow(n, 1/3) % 1) * 2**32 | 0; }
+  const l = m.length, p = new Uint8Array(((l + 9 + 63) >> 6) << 6); p.set(m); p[l] = 0x80;
+  const dv = new DataView(p.buffer); dv.setUint32(p.length - 4, l * 8 >>> 0); dv.setUint32(p.length - 8, Math.floor(l / 2**29));
+  const r = (x, n) => x >>> n | x << (32 - n), w = new Int32Array(64);
+  for (let o = 0; o < p.length; o += 64) {
+    for (let i = 0; i < 16; i++) w[i] = dv.getInt32(o + i * 4);
+    for (let i = 16; i < 64; i++) { const a = w[i-15], b = w[i-2]; w[i] = (r(a,7) ^ r(a,18) ^ a >>> 3) + w[i-16] + (r(b,17) ^ r(b,19) ^ b >>> 10) + w[i-7] | 0; }
+    let [a, b, c, d, e, f, g, h] = H;
+    for (let i = 0; i < 64; i++) { const t1 = h + (r(e,6) ^ r(e,11) ^ r(e,25)) + (e & f ^ ~e & g) + K[i] + w[i] | 0, t2 = (r(a,2) ^ r(a,13) ^ r(a,22)) + (a & b ^ a & c ^ b & c) | 0;
+      h = g; g = f; f = e; e = d + t1 | 0; d = c; c = b; b = a; a = t1 + t2 | 0; }
+    [a, b, c, d, e, f, g, h].forEach((v, i) => H[i] = H[i] + v | 0);
+  }
+  return H.map(v => (v >>> 0).toString(16).padStart(8, "0")).join("");
+}
+const MAN = Object.fromEntries(D.public_manifest.trim().split(/\r?\n/).map(l => { const [h, n] = l.split(/\s+\*?/, 2); return [n.trim(), h]; }));
+const enc = s => new TextEncoder().encode(s).buffer;
+(async () => {
+  const h = await sha256(enc(D.public_raw)), ok = h === MAN["denik_public.jsonl"];
+  let html = `<p>Data stránky (<code>denik_public.jsonl</code>, ${R.length} záznamů):<br><code>${h}</code><br>`
+    + (ok ? '<span class="ok" id="hashOK">✓ shoduje se s public_manifest.sha256</span>' : '<span class="bad" id="hashOK">✗ NESHODUJE se s public_manifest.sha256</span>') + "</p>";
+  if (location.protocol.startsWith("http")) {
+    try { const t = await (await fetch("public_manifest.sha256", {cache: "no-store"})).arrayBuffer();
+      const fh = await sha256(t), mh = await sha256(enc(D.public_manifest));
+      html += `<p>public_manifest.sha256 na webu: ${fh === mh ? '<span class="ok">✓ shodný se stránkou</span>' : '<span class="bad">✗ liší se od stránky</span>'}</p>`;
+    } catch (e) { html += '<p class="mut">public_manifest.sha256 nelze načíst.</p>'; }
+  }
+  html += '<p class="mut">Deník je odvozený pohled z doložených podkladů zakázky, zdrojové podklady vynechány.</p>';
+  $("integ").innerHTML = html;
+})();
+$("soubory").onchange = async e => {
+  const out = [];
+  for (const f of e.target.files) {
+    const h = await sha256(await f.arrayBuffer()), exp = MAN[f.name];
+    out.push(`<div><code>${esc(f.name)}</code>: ${exp ? (exp === h ? '<span class="ok">✓ shoda s manifestem</span>' : '<span class="bad">✗ neshoda</span>') : '<span class="mut">není v manifestu</span>'}<br><code class="mut">${h}</code></div>`);
+  }
+  $("souboryOut").innerHTML = out.join("");
+};
+
+
+sel = [...R].reverse().find(r => r.datum <= D.obdobi[1])?.datum || null;  // výchozí: nejnovější den
+// sdílený odkaz s obdobím: „od“ a filtr z adresy, konec vždy dnešek – starý odkaz nesmí skrýt nové zápisy
+if (location.hash.length > 1) { fromHash(); $("do").value = D.obdobi[1]; }
+galerie(false);
+render();
+</script>
+</body>
+</html>
