@@ -155,7 +155,7 @@ function fromHash() {
 // ---------- hlavička ----------
 const I = D.identifikace;
 $("stavba").textContent = "Stavební deník – " + I.stavba;
-$("ident").textContent = `${I.misto} · ${I.predmet} · zhotovitel ${I.zhotovitel} · období ${I.obdobi_pilotu}`;
+$("ident").textContent = `${I.misto} · ${I.predmet} · zhotovitel ${I.zhotovitel} · období ${fmtD(D.obdobi[0])} – ${fmtD(D.obdobi[1])}`;
 $("gen").textContent = "data vygenerována " + D.vygenerovano.replace("T", " ");
 
 // ---------- filtry ----------
